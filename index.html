@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+	<script src="sketch.js"></script>
+	<title>Орбита</title>
+</head>
+<body>
+	
+
+<body>
+	<div class="control_box__wrapp">
+	<div class="ControlBox">
+
+	<div class="control_box__row">
+		<span>
+			 Большая полуось (a)
+		</span>
+		<input type="range" id="txta" min="100" max="300" value="200" step="0.1" oninput="seta(document.getElementById('txta').value);" onchange="updatetxtaInput(this.value);">
+		<input type="text" id="txtaInput" value="200 млн км">
+	</div>
+
+	<div class="control_box__row">
+		<span>
+			Эксцентриситет (e)
+		</span>
+		<input type="range" id="txtecc" min="0" max="2" value="0.2" step="0.01" oninput="setecc(document.getElementById('txtecc').value);" onchange="updatetxteccInput(this.value);">
+		<input type="text" id="txteccInput" value="0.2">
+	</div>
+
+	<div class="control_box__row">
+		<span>
+			Наклонение (i)
+		</span>
+		<input type="range" id="txtinc" min="-90" max="90" value="-0.6" step="1" oninput="setinc(document.getElementById('txtinc').value);" onchange="updatetxtincInput(this.value);">
+		<input type="text" id="txtincInput" value="-0.6 °">
+	</div>
+
+	<div class="control_box__row">
+		<span>
+			Долгота восходящего узла (Ω) (RA)
+		</span>
+		<input type="range" id="txtRA" min="0" max="360" value="0.6" step="1" oninput="setRA(document.getElementById('txtRA').value);" onchange="updatetxtRAInput(this.value);">
+		<input type="text" id="txtRAInput" value="0.6 °">
+	</div>
+
+	<div class="control_box__row">
+		<span>
+		Аргумент перицентра (ω)
+		</span>
+		<input type="range" id="txtomega" min="0" max="360" value="0.3" step="1" oninput="setomega(document.getElementById('txtomega').value);" onchange="updatetxtomegaInput(this.value);">
+		<input type="text" id="txtomegaInput" value="0.3 °">
+	</div>
+
+	<div class="control_box__row">
+		<span>
+		Средняя аномалия (Mo)
+		</span>
+		<input type="range" id="txtM0" min="0" max="360" value="0" step="1" oninput="setM0(document.getElementById('txtM0').value);" onchange="updatetxtM0Input(this.value);">
+		<input type="text" id="txtM0Input" value="0">
+	</div>
+
+</div>
+</div>
+
+	<script>
+	function updatetxtaInput(val) {
+          document.getElementById('txtaInput').value=val + " млн км";
+        }
+
+	function updatetxteccInput(val) {
+			    document.getElementById('txteccInput').value=val ;
+			  }
+
+	function updatetxtincInput(val) {
+					document.getElementById('txtincInput').value=val + " °";
+				}
+
+	function updatetxtRAInput(val) {
+					document.getElementById('txtRAInput').value=val + " °";
+				}
+
+	function updatetxtomegaInput(val) {
+					document.getElementById('txtomegaInput').value=val + " °";
+				}
+
+	function updatetxtM0Input(val) {
+					document.getElementById('txtM0Input').value=val + "сурок";
+				}
+
+	</script>
+
+</body>
+
+</html>

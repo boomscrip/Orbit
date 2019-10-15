@@ -1,0 +1,72 @@
+html,
+body {
+  margin: 0px;
+  background-color: #000;
+  overflow-y: hidden;
+  /* background-image: url(../space.png); */
+  background-repeat: repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+   -o-background-size: 100%; /* Opera 9.6+ */
+   background-size: 100%; /* Современные браузеры */
+}
+
+.control_box__wrapp {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.ControlBox {
+  display: flex;
+  box-shadow: 0px 3px 15px 5px rgba(183, 180, 180, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  margin-top: 15px;
+  width: 500px;
+  color: #FFF;
+}
+
+.control_box__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.control_box__row span {
+  width: 250px;
+}
+
+input {
+  width: 6em;
+  padding: 2px;
+  margin: 2px;
+}
+
+input[type=text] {
+  width: 10em;
+  height: 15px;
+  border: 3px solid grey;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#txtaInput {
+  border: 3px solid #1e3ee3;
+}
+
+canvas {
+  display: block;
+  top: 0px;
+  left: 0px;
+}
